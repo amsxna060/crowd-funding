@@ -1,0 +1,13 @@
+.demo-child {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.demo-child p {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}

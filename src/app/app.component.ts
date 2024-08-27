@@ -8,9 +8,9 @@ import { BlobOptions } from 'buffer';
 })
 export class AppComponent {
   title = 'crowd-funding';
-  goToProjects: boolean = false;
-  // fetching data from container Component child to parent
-  setData(value: any) {
-    this.goToProjects = value;
-  }
+  // goToProjects: boolean = false;
+  // // fetching data from container Component child to parent
+  // setData(value: any) {
+  //   this.goToProjects = value;
+  // }
 }

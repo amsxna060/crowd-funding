@@ -1,1 +1,7 @@
-<p>about works!</p>
+<div class="input-container">
+  <input placeholder="Enter name..." [(ngModel)]="name" />
+  <button (click)="replaceData()">Change</button>
+</div>
+<app-demo-child [name]="namedata" [isMarried]="isMarried">
+  <p #mygreeting>Hi There, I am {{ namedata }}</p>
+</app-demo-child>

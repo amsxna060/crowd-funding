@@ -3,12 +3,12 @@
     <a routerLink="/">
       <img src="/assets/logo.png" alt="Platform Logo" />
     </a>
-    <p class="logotext">{{ brandName }}</p>
+    <a routerLink="/" class="logotext">{{ brandName }}</a>
   </div>
   <nav class="navigation">
     <ul>
-      <li *ngFor="let link of navOptions">
-        <a href="#">{{ link }}</a>
+      <li *ngFor="let navOption of navOptions">
+        <a [routerLink]="navOption.link">{{ navOption.title }}</a>
       </li>
     </ul>
   </nav>

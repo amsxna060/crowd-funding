@@ -13,6 +13,7 @@ import { SearchbarComponent } from './components/projects/searchbar/searchbar.co
 import { ProjectListComponent } from './components/projects/project-list/project-list.component';
 import { ProjectComponent } from './components/projects/project-list/project/project.component';
 import { AboutComponent } from './components/about/about.component';
+import { DemoChildComponent } from './components/about/demo-child/demo-child.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AboutComponent } from './components/about/about.component';
     ProjectListComponent,
     ProjectComponent,
     AboutComponent,
+    DemoChildComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideClientHydration()],

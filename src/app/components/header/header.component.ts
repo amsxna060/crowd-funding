@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { title } from 'process';
 
 @Component({
   selector: 'app-header',
@@ -7,5 +8,10 @@ import { Component, Input } from '@angular/core';
 })
 export class HeaderComponent {
   brandName: string = 'Support Genious';
-  navOptions: string[] = ['Explore', 'Start a Campaign', 'About', 'Contact'];
+  navOptions: any[] = [
+    { title: 'Explore', link: '/projects' },
+    { title: 'Start a Campaign', link: '/campaign' },
+    { title: 'About', link: '/about' },
+    { title: 'Contact', link: '/contact' },
+  ];
 }
