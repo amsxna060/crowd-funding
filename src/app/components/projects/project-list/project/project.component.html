@@ -3,6 +3,7 @@
   class="project-item"
   (click)="navigateToDetail()"
   *ngIf="project.title.toLowerCase().includes(searchedProject.toLowerCase())"
+  [highlightOnCondition]="project.fundingGoal === project.currentFunding"
 >
   <!-- used property binding and interpolation -->
   <img

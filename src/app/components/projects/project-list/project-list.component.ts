@@ -14,7 +14,7 @@ export class ProjectListComponent {
       description:
         'A reusable water bottle made from 100% recycled materials. Perfect for reducing plastic waste.',
       fundingGoal: 50000,
-      currentFunding: 35000,
+      currentFunding: 50000,
       backers: 120,
       imageUrl: 'https://picsum.photos/id/13/300/200',
     },
@@ -41,7 +41,7 @@ export class ProjectListComponent {
       description:
         'A compact coffee maker that you can take anywhere. Perfect for coffee lovers on the go.',
       fundingGoal: 25000,
-      currentFunding: 15000,
+      currentFunding: 25000,
       backers: 80,
       imageUrl: 'https://picsum.photos/id/32/300/200',
     },
@@ -95,7 +95,7 @@ export class ProjectListComponent {
       description:
         'A sleek and efficient wireless charging pad for all your devices. Great for reducing cable clutter.',
       fundingGoal: 30000,
-      currentFunding: 22000,
+      currentFunding: 30000,
       backers: 140,
       imageUrl: 'https://picsum.photos/id/10/300/200',
     },

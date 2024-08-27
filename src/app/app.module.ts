@@ -15,6 +15,7 @@ import { ProjectComponent } from './components/projects/project-list/project/pro
 import { AboutComponent } from './components/about/about.component';
 import { DemoChildComponent } from './components/about/demo-child/demo-child.component';
 import { MyStyleDirective } from './CustomDirectives/my-style.directive';
+import { HighlightOnConditionDirective } from './CustomDirectives/highlight-on-condition.directive';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { MyStyleDirective } from './CustomDirectives/my-style.directive';
     AboutComponent,
     DemoChildComponent,
     MyStyleDirective,
+    HighlightOnConditionDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideClientHydration()],

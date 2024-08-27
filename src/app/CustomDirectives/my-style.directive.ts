@@ -5,12 +5,15 @@ import {
   OnInit,
   Renderer2,
   RendererStyleFlags2,
+  Input,
 } from '@angular/core';
 
 @Directive({
   selector: '[myStyle]',
 })
 export class MyStyleDirective implements OnInit {
+  @Input('myStyle') bgTextColor: { backColor: string; textColor: string };
+
   constructor(private element: ElementRef, private renderer: Renderer2) {}
 
   ngOnInit() {
@@ -19,9 +22,13 @@ export class MyStyleDirective implements OnInit {
     this.renderer.setStyle(
       this.element.nativeElement,
       'backgroundColor',
-      '#f2f2f2'
+      this.bgTextColor.backColor
     );
-    this.renderer.setStyle(this.element.nativeElement, 'color', '#000');
+    this.renderer.setStyle(
+      this.element.nativeElement,
+      'color',
+      this.bgTextColor.textColor
+    );
   }
 
   @HostListener('mouseenter') onMouseEnter() {
@@ -36,8 +43,12 @@ export class MyStyleDirective implements OnInit {
     this.renderer.setStyle(
       this.element.nativeElement,
       'background-color',
-      '#f2f2f2'
+      this.bgTextColor.backColor
     );
-    this.renderer.setStyle(this.element.nativeElement, 'color', '#000');
+    this.renderer.setStyle(
+      this.element.nativeElement,
+      'color',
+      this.bgTextColor.textColor
+    );
   }
 }
