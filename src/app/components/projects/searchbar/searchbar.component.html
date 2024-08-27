@@ -1,0 +1,11 @@
+<!-- used two-way binding (ngModel) & eventBinding -->
+<div class="searchbar-container">
+  <input
+    type="text"
+    placeholder="Search projects..."
+    class="search-input"
+    [(ngModel)]="searchText"
+    (keyup.enter)="search()"
+  />
+  <button class="search-button" (click)="search()">Search</button>
+</div>

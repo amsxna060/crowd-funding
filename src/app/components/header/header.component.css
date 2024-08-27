@@ -1,0 +1,117 @@
+/* Overall header style */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 30px;
+  background: linear-gradient(
+    90deg,
+    #1a4580,
+    #2c1067,
+    #000916
+  ); /* Gradient background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo and text container */
+.logo {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.logo img {
+  height: 40px; /* Adjusted for better visibility */
+  margin-right: 10px; /* Space between logo image and text */
+}
+
+.logotext {
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px; /* Larger for better visibility */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease;
+}
+
+.logotext:hover {
+  color: #ffd700; /* Gold color on hover */
+}
+
+/* Navigation menu */
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Space between nav items */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.navigation ul li {
+  display: inline;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navigation ul li a:hover {
+  color: #ffd700; /* Gold color on hover */
+}
+
+/* Donate button */
+.donate-button {
+  display: flex;
+  gap: 15px;
+}
+
+.donate-button a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  background-color: #ec6666;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.donate-button a:hover {
+  background-color: #d11a2a; /* Darker red on hover */
+  transform: translateY(-3px);
+}
+
+.donate-button a::after {
+  content: "→";
+  margin-left: 10px;
+  font-size: 18px; /* Larger arrow */
+  transform: rotate(-45deg);
+  display: inline-block;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navigation ul {
+    flex-direction: column;
+    display: none;
+  }
+
+  .navigation ul.active {
+    display: flex;
+  }
+
+  .navigation ul li {
+    margin-bottom: 10px;
+  }
+
+  .donate-button {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

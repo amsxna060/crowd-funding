@@ -1,5 +1,6 @@
 .container {
-  background-image: url("../../public/assets/crowdfundbg.jpg");
+  background-image: url("../../../../public/assets/crowdfundbg.jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;

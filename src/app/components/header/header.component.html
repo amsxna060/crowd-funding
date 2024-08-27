@@ -1,0 +1,18 @@
+<header>
+  <div class="logo">
+    <a routerLink="/">
+      <img src="/assets/logo.png" alt="Platform Logo" />
+    </a>
+    <p class="logotext">{{ brandName }}</p>
+  </div>
+  <nav class="navigation">
+    <ul>
+      <li *ngFor="let link of navOptions">
+        <a href="#">{{ link }}</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="donate-button">
+    <a routerLink="/donate" class="donate-btn">Donate</a>
+  </div>
+</header>
