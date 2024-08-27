@@ -14,6 +14,7 @@ import { ProjectListComponent } from './components/projects/project-list/project
 import { ProjectComponent } from './components/projects/project-list/project/project.component';
 import { AboutComponent } from './components/about/about.component';
 import { DemoChildComponent } from './components/about/demo-child/demo-child.component';
+import { MyStyleDirective } from './CustomDirectives/my-style.directive';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { DemoChildComponent } from './components/about/demo-child/demo-child.com
     ProjectComponent,
     AboutComponent,
     DemoChildComponent,
+    MyStyleDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideClientHydration()],
