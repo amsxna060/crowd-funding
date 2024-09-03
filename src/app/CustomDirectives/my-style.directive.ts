@@ -35,7 +35,7 @@ export class MyStyleDirective implements OnInit {
     this.renderer.setStyle(
       this.element.nativeElement,
       'background-color',
-      '#1a72d1'
+      '#000'
     );
     this.renderer.setStyle(this.element.nativeElement, 'color', 'white');
   }

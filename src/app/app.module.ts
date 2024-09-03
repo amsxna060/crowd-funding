@@ -16,6 +16,11 @@ import { AboutComponent } from './components/about/about.component';
 import { DemoChildComponent } from './components/about/demo-child/demo-child.component';
 import { MyStyleDirective } from './CustomDirectives/my-style.directive';
 import { HighlightOnConditionDirective } from './CustomDirectives/highlight-on-condition.directive';
+import { FooterComponent } from './components/footer/footer.component';
+import { SigninComponent } from './components/signin/signin.component';
+import { CreateCampaignComponent } from './components/create-campaign/create-campaign.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HowItWorksComponent } from './components/how-it-works/how-it-works.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +35,12 @@ import { HighlightOnConditionDirective } from './CustomDirectives/highlight-on-c
     DemoChildComponent,
     MyStyleDirective,
     HighlightOnConditionDirective,
+    FooterComponent,
+    SigninComponent,
+    CreateCampaignComponent,
+    HowItWorksComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })

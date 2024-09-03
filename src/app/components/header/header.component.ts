@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { title } from 'process';
 
 @Component({
@@ -7,11 +8,14 @@ import { title } from 'process';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
-  brandName: string = 'Support Genious';
+  constructor(private router: Router) {}
+  brandName: string = 'Support A Genious';
   navOptions: any[] = [
-    { title: 'Explore', link: '/projects' },
-    { title: 'Start a Campaign', link: '/campaign' },
-    { title: 'About', link: '/about' },
-    { title: 'Contact', link: '/contact' },
+    { title: 'Home', link: '' },
+    { title: 'Start a Campaign', link: 'campaign' },
+    { title: 'How It Works', link: 'howitworks' },
   ];
+  navigateToLogin() {
+    this.router.navigate(['/login']);
+  }
 }

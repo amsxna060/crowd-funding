@@ -1,35 +1,37 @@
-/* Overall header style */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pixelify+Sans:wght@400..700&display=swap");
+
+/* Ensure the header is fixed and covers the top of the page */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 30px;
-  background: linear-gradient(
-    90deg,
-    #1a4580,
-    #2c1067,
-    #000916
-  ); /* Gradient background */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 10; /* Higher z-index to ensure it sits above the carousel */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  padding: 8px 30px; /* Adjust padding as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional shadow for better separation */
 }
 
-/* Logo and text container */
+/* Logo and text styling */
 .logo {
   display: flex;
-  align-items: center; /* Align items vertically */
+  align-items: center; /* Center items vertically */
 }
 
 .logo img {
-  height: 40px; /* Adjusted for better visibility */
-  margin-right: 10px; /* Space between logo image and text */
+  height: 40px; /* Adjust logo size */
+  margin-right: 10px; /* Space between logo and text */
 }
 
 .logotext {
-  color: #ffffff;
+  color: #ffffff; /* White color for contrast */
   font-weight: 700;
-  font-family: "Roboto", sans-serif;
-  font-size: 20px; /* Larger for better visibility */
-  text-decoration: none; /* Remove underline */
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
@@ -37,13 +39,13 @@ header {
   color: #ffd700; /* Gold color on hover */
 }
 
-/* Navigation menu */
+/* Navigation menu styling */
 .navigation ul {
   list-style: none;
   display: flex;
-  gap: 30px; /* Space between nav items */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 .navigation ul li {
@@ -52,10 +54,10 @@ header {
 
 .navigation ul li a {
   text-decoration: none;
-  color: #ffffff;
+  color: #ffffff; /* White color for contrast */
   font-weight: 600;
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   transition: color 0.3s ease;
 }
 
@@ -63,7 +65,7 @@ header {
   color: #ffd700; /* Gold color on hover */
 }
 
-/* Donate button */
+/* Donate button styling */
 .donate-button {
   display: flex;
   gap: 15px;
@@ -72,7 +74,7 @@ header {
 .donate-button a {
   text-decoration: none;
   color: #ffffff;
-  padding: 10px 20px;
+  padding: 8px 30px;
   border-radius: 6px;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
@@ -82,20 +84,22 @@ header {
   transition: background-color 0.3s, transform 0.3s;
 }
 
-.donate-button a:hover {
-  background-color: #d11a2a; /* Darker red on hover */
-  transform: translateY(-3px);
-}
+/* this for hoven and animate slightly up */
+/* .donate-button a:hover {
+  background-color: #d11a2a;
+  transform: translateY(-1px);
+} */
 
-.donate-button a::after {
+/* This is to show rotated arrow in button */
+/* .donate-button a::after {
   content: "→";
   margin-left: 10px;
-  font-size: 18px; /* Larger arrow */
+  font-size: 18px;
   transform: rotate(-45deg);
   display: inline-block;
-}
+} */
 
-/* Responsive design */
+/* Responsive design adjustments */
 @media (max-width: 768px) {
   .navigation ul {
     flex-direction: column;

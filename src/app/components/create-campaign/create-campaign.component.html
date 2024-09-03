@@ -1,0 +1,120 @@
+<div class="create-campaign-container">
+  <h2>Create Your Campaign</h2>
+
+  <form [formGroup]="campaignForm" (ngSubmit)="onSubmit()">
+    <div *ngIf="currentStep === 1">
+      <!-- Step 1: Project Details -->
+      <h3>Project Details</h3>
+
+      <label for="title">Project Title:</label>
+      <input id="title" formControlName="title" type="text" required />
+
+      <label for="description">Description:</label>
+      <textarea
+        id="description"
+        formControlName="description"
+        required
+      ></textarea>
+
+      <label for="category">Category:</label>
+      <select id="category" formControlName="category" required>
+        <option value="" disabled>Select a category</option>
+        <option *ngFor="let category of categories" [value]="category">
+          {{ category }}
+        </option>
+      </select>
+
+      <label for="image">Project Image:</label>
+      <input
+        id="image"
+        formControlName="image"
+        type="file"
+        (change)="onFileSelected($event)"
+      />
+
+      <button type="button" (click)="nextStep()">Next</button>
+    </div>
+
+    <div *ngIf="currentStep === 2">
+      <!-- Step 2: Funding Goal -->
+      <h3>Funding Goal</h3>
+
+      <label for="goalAmount">Funding Goal ($):</label>
+      <input
+        id="goalAmount"
+        formControlName="goalAmount"
+        type="number"
+        required
+      />
+
+      <label for="deadline">Deadline:</label>
+      <input id="deadline" formControlName="deadline" type="date" required />
+
+      <button type="button" (click)="previousStep()">Previous</button>
+      <button type="button" (click)="nextStep()">Next</button>
+    </div>
+
+    <div *ngIf="currentStep === 3">
+      <!-- Step 3: Rewards -->
+      <h3>Rewards</h3>
+
+      <div formArrayName="rewards">
+        <div
+          *ngFor="let reward of rewards.controls; let i = index"
+          [formGroupName]="i"
+        >
+          <label for="rewardTitle">Reward Title:</label>
+          <input
+            id="rewardTitle"
+            formControlName="rewardTitle"
+            type="text"
+            required
+          />
+
+          <label for="rewardDescription">Reward Description:</label>
+          <textarea
+            id="rewardDescription"
+            formControlName="rewardDescription"
+            required
+          ></textarea>
+
+          <label for="rewardImage">Reward Image:</label>
+          <input
+            id="rewardImage"
+            formControlName="rewardImage"
+            type="file"
+            (change)="onRewardImageSelected($event, i)"
+          />
+
+          <button type="button" (click)="removeReward(i)">Remove Reward</button>
+        </div>
+      </div>
+
+      <button type="button" (click)="addReward()">Add Another Reward</button>
+
+      <button type="button" (click)="previousStep()">Previous</button>
+      <button type="button" (click)="nextStep()">Next</button>
+    </div>
+
+    <div *ngIf="currentStep === 4">
+      <!-- Step 4: Preview & Submit -->
+      <h3>Preview & Submit</h3>
+
+      <h4>{{ campaignForm.value.title }}</h4>
+      <p>{{ campaignForm.value.description }}</p>
+      <p>
+        Funding Goal: ${{ campaignForm.value.goalAmount }} by
+        {{ campaignForm.value.deadline | date }}
+      </p>
+      <ul>
+        <li *ngFor="let reward of campaignForm.value.rewards">
+          <strong>{{ reward.rewardTitle }}</strong> -
+          {{ reward.rewardDescription }}
+        </li>
+      </ul>
+
+      <button type="button" (click)="previousStep()">Previous</button>
+      <button type="submit">Submit Campaign</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,108 @@
+.signin-container {
+  max-width: 900px;
+  margin: 150px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* position: absolute; */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+
+.welcome-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.subheading {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.login-sections {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.login-section {
+  flex: 1;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.login-section:last-child {
+  border-right: none;
+}
+
+.login-section h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+input[type="email"],
+input[type="password"],
+.name-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.name-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.name-input {
+  flex: 1;
+}
+
+.social-button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.login-button,
+.create-account-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: #5cb85c;
+  color: white;
+  cursor: pointer;
+}
+
+.forgot-password {
+  display: block;
+  text-align: left;
+  margin-bottom: 15px;
+  font-size: 12px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}

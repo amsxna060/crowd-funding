@@ -1,26 +1,39 @@
-.container {
-  background-image: url("../../../../public/assets/crowdfundbg.jpg");
-
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+  padding: 20px;
+  border-radius: 10px;
+  /* position: relative; */
+  bottom: 50%;
 }
 
-.btn {
-  background-color: #4caf50;
+.carousel-caption h2 {
+  font-size: 5rem;
   color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%);
-  transform: translateX(-50%);
 }
 
-.btn:hover {
-  background-color: #3e8e41;
+.carousel-caption p {
+  font-size: 1.5rem;
+  color: #ddd;
+  margin-top: 10px;
+}
+/* Set a fixed height for the carousel */
+#homepageCarousel {
+  height: 800px; /* Adjust this value to your desired height */
+  overflow: hidden; /* Hide any overflow if images are larger */
+}
+
+/* Ensure carousel items fit within the set height */
+.carousel-item {
+  height: 100%;
+}
+
+/* Adjust the images to fit within the carousel */
+.carousel-item img {
+  height: 100%;
+  object-fit: cover; /* Ensures images cover the area without stretching */
 }
