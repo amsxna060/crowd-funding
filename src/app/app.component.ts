@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { BlobOptions } from 'buffer';
 
 @Component({
   selector: 'app-root',
